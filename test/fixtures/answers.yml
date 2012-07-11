@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  question_id: 1
+  ans: MyString
+  rating: 1.5
+  name: MyString
+  email: MyString
+  references: 
+
+two:
+  question_id: 1
+  ans: MyString
+  rating: 1.5
+  name: MyString
+  email: MyString
+  references: 

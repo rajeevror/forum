@@ -1,0 +1,44 @@
+<div id="index_id" align="right">
+  <%= link_to 'Register/Login', new_forum_path %>
+</div>
+<div class="post">
+  <%= render 'askquestion' %><p>
+</div>
+<div id="divid"> 
+  <% @hash.each do |k,v| %>
+  Question : <%= k %></br>
+  Answer  : <%= link_to "#{v}", :action => :allanswer  %></br>
+  <% end %>
+</div>
+  
+ def index
+    @hash = Hash.new
+    @question = QuestionTable.all
+    @question.each do |q|
+      @hash[q.question] = AnswerTable.where(:question_table_id => q.id).count(:question_table_id)  
+    end
+  end
+
+
+////////////////allanswer
+
+
+<%= form_tag post_forum_path(@questions[0].id)  do %>
+ Question  : <%= @questions[0].que_name %></br>
+<p>
+
+<% @answers.each do |v| %>
+ Answer :<%= v.answer %> </br>
+
+ Rating :<%= v.rating %> </br>
+<% end %>
+</br>
+    <%= label_tag("Your Answer") %><p>
+    <%= text_area_tag 'body', nil, :size => "15x6" %></br>
+    <%= label_tag("Email Id:") %>
+    <%= email_field_tag(:email) %></br>  
+    <%= label_tag ("Your Name") %>
+    <%= text_field_tag(:name) %></br>
+<%= submit_tag("Post Your Answer") %>
+<% end %>
+

@@ -1,0 +1,32 @@
+body { background-color: #FFFFFF;
+      }
+
+
+
+#index_id {
+    
+    position: absolute;
+    width:auto;
+    height:100px;
+    left:150px;
+    top: 10px;
+    display:inline;
+}
+
+.post {
+    font-size: 12px;
+    height :auto;
+    margin: 120px 50px 60px 40px;
+}
+.loginform {
+   font-size: 12px;
+   height :auto;
+   margin: 10px 30px 10px 700px;
+ }
+#divid {
+     position: relative;
+     width:auto;
+     height :auto;
+     font-size: 14px;
+     margin: 90px 30px 10px 60px;
+}

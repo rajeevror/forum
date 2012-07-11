@@ -1,0 +1,11 @@
+
+<%= form_tag   do %>
+    <%= label_tag("Your Answer") %><p>
+    <%= text_area_tag 'body', nil, :size => "25x10" %></br>
+    <%= label_tag("Email Id:") %>
+    <%= email_field_tag(:email) %></br>  
+    <%= label_tag ("Your Name") %>
+    <%= text_field_tag(:name) %></br>
+<%= submit_tag("Post Your Answer") %>
+<% end %>
+

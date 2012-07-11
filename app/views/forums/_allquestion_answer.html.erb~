@@ -1,0 +1,9 @@
+<div id="divid"> 
+  <% @hash.each do |k,v| %>
+  Question : <%= k %></br>
+  <% v.each do |a| %>
+
+  Answer  : <%= link_to "#{a[0]}", :action => :allanswer, :id=>a[1]  %></br>
+ <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,8 @@
+class Forum < ActiveRecord::Base
+ 
+  validates :user_name, :email, :password, :presence => true
+  validates_confirmation_of :password    
+  
+  
+  
+end

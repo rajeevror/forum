@@ -1,0 +1,26 @@
+<% if session[:current_id] ==nil %>
+  <% render login_index_path %>
+<% else %>    
+hello <%= session[:current_id] %>
+ <%= link_to 'logout', logout_login_index_path %></br>
+<% end %>
+<%= @question[0].question %></br>
+<% @answer.each do |a| %>
+
+Answer :<%= a.answer %></br>
+Rating :<%= a.rating %></br>
+<% end %>
+<%= form_tag post_forum_path(@question[0].id)  do %>
+ 
+</br>
+    <%= label_tag("Your Answer") %><p>
+    <%= text_area_tag 'body', nil, :size => "15x6" %></br>
+    <%= label_tag("Email Id:") %>
+    <%= email_field_tag(:email) %></br>  
+    <%= label_tag ("Your Name") %>
+    <%= text_field_tag(:name) %></br>
+<%= submit_tag("Post Your Answer") %>
+<% end %>
+
+
+

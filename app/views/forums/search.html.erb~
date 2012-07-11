@@ -1,0 +1,24 @@
+
+
+<div id="index_id" align="right">
+  <%= link_to 'Register/Login', new_forum_path %><p>
+  
+</div>
+<div class="post">
+  <%= render 'askquestion' %></br>
+  <h3>Result  Found</h3>
+  Question :<%= link_to "#{ @questions[0].question}", :action => :allanswer, :id => @questions[0].id  %></br>
+    Answer :<%= @answers.answer %></br>
+    posted by: <%= @users.user_name %>
+    Rating :<%= @answers.rating %></br>
+   <p><%= form_tag post_forum_path(@questions[0].id)  do %></p>
+     <%= label_tag("Your Answer:") %><p>
+     <%= text_area_tag 'body', nil, :size => "25x10" %></br>
+     <%= label_tag("Email Id:") %>
+     <%= email_field_tag(:email) %></br>  
+     <%= label_tag ("Your Name") %>
+     <%= text_field_tag(:name) %></br>
+     <%= submit_tag("Post Your Answer") %>
+   <% end %>
+</div>
+

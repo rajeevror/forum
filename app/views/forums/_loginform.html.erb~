@@ -1,0 +1,10 @@
+<div class="loginform">
+<%= form_tag dologin_forums_path  do %>
+    <%= label_tag("Email ID") %>
+    <%= email_field_tag(:email) %></br>  
+    <%= label_tag ("password") %>
+    <%= password_field_tag(:password) %></br>
+<%= submit_tag("login") %>
+<% end %>
+
+</div>

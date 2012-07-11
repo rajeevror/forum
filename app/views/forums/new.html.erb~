@@ -1,0 +1,12 @@
+
+<h1>New User</h1>    
+<div>
+<%= render 'registration' %>                   
+</div><br>
+<div>
+<%= render 'loginform' %>                   
+</div>
+
+<%= link_to 'Back', forums_path %>
+
+

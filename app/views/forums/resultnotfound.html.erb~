@@ -1,0 +1,24 @@
+<h3>Result Not Found</h3>
+you can post your question.
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+  $("button").click(function(){
+  $('#divid').toggle();
+   });
+   });
+</script>
+ <p><button>Post As</button></p>
+  <div id="divid">
+    <%= form_tag post_question_forums_path  do %>
+    <%= label_tag("Your Question") %></br>
+    <%= text_area_tag 'question', nil, :size => "25x8" %></br>
+    <%= label_tag("Email Id:") %>
+    <%= email_field_tag(:email) %></br>  
+    <%= label_tag ("Your Name") %>
+    <%= text_field_tag(:name) %></br>
+    <%= submit_tag("Post Your Answer") %>
+    <% end %>
+  </div>
+

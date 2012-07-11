@@ -1,0 +1,18 @@
+<%= form_tag("/login", :method=>"get") do %>
+  
+
+ <div class="field">
+    <%= label_tag("User Name") %><br />
+    <%= text_field_tag(:q) %> 
+  </div>
+  <div class="field">
+    <%= label_tag("EmailID") %><br />
+    <%= email_field(:user, :address) %> 
+  </div>
+  
+  <div class="field">
+    <%= label_tag ("password") %><br />
+    <%= password_field_tag(:password) %>
+  </div>
+  
+<% end %>

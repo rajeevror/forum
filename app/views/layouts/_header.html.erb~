@@ -1,0 +1,20 @@
+
+<html>
+<body>
+<div >
+<%= form_tag dologin_forums_path do  %>
+  
+    <%= label_tag("Email ID") %>
+    <%= email_field_tag(:email) %> 
+ 
+  
+  
+    <%= label_tag ("password") %><br />
+    <%= password_field_tag(:password) %>
+  
+  <%= submit_tag("login") %>
+<% end %>
+</div>
+
+</body>
+</html>
